@@ -10,6 +10,7 @@
 
 #include <stdint.h>
 #include <stdio.h>
+#include <limits.h>
 #include <obstack.h>
 #include <dwarf.h>
 #include <elfutils/libdwfl.h>

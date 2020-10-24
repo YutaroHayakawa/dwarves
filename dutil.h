@@ -28,6 +28,10 @@
 #define __pure __attribute__ ((pure))
 #endif
 
+#ifndef __always_inline
+#define __always_inline inline __attribute__ ((always_inline))
+#endif
+
 #define roundup(x,y) ((((x) + ((y) - 1)) / (y)) * (y))
 
 static inline __attribute__((const)) bool is_power_of_2(unsigned long n)

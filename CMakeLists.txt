@@ -91,7 +91,7 @@ set_target_properties(dwarves PROPERTIES VERSION 1.0.0 SOVERSION 1)
 set_target_properties(dwarves PROPERTIES INTERFACE_LINK_LIBRARIES "")
 target_include_directories(dwarves PRIVATE
 			   ${CMAKE_CURRENT_SOURCE_DIR}/lib/bpf/include/uapi)
-target_link_libraries(dwarves ${DWARF_LIBRARIES} ${ZLIB_LIBRARIES})
+target_link_libraries(dwarves ${DWARF_LIBRARIES} ${ZLIB_LIBRARIES} -largp -lobstack)
 
 set(dwarves_emit_LIB_SRCS dwarves_emit.c)
 add_library(dwarves_emit SHARED ${dwarves_emit_LIB_SRCS})
